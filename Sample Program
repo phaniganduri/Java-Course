@@ -1,0 +1,28 @@
+package com.org;
+public class Mobile {
+      String model;
+      String ram;
+      String rom;
+      double price;
+      public void details() {
+    	  System.out.println(model+" "+ram+" "+price);
+      }
+	public static void main(String[] args) {
+		Mobile obj1 = new Mobile();
+		Mobile obj2 = new Mobile();
+		
+		obj1.model = "SAMSUNG";
+		obj1.ram   = "8GB";
+		obj1.rom   = "128GB";
+		obj1.price = 20999.00;
+		
+		obj2.model = "IPHONE";
+		obj2.ram   = "6GB";
+		obj2.rom   = "128GB";
+		obj2.price = 69999.00;
+		
+		obj1.details();
+		obj2.details();
+	}
+
+}

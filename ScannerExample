@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class ScannerExample {
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter byte value");
+        byte a = scanner.nextByte();
+        System.out.println("Enter short value");
+        short b = scanner.nextShort();
+        System.out.println("Enter int value");
+        int c  = scanner.nextInt();
+        System.out.println("Enter long value");
+        long d = scanner.nextLong();
+        System.out.println("Enter float value");
+        float e = scanner.nextFloat();
+        System.out.println("Enter double value");
+        double f = scanner.nextDouble();
+        System.out.println(a+" "+b+" "+c+" "+d+" "+e+" "+f+" ");
+
+    }
+}

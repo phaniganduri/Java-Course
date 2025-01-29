@@ -1,0 +1,11 @@
+package com.codegnan;
+public class ExplicitTypeConversion {
+	public static void main(String[] args) {
+	        double x = 4563.1254;
+	        
+	        int y = (int)x;
+	        
+	        System.out.println(y);
+	}
+
+}

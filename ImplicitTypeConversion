@@ -1,0 +1,13 @@
+package com.codegnan;
+public class ImplicitTypeConversion {
+	public static void main(String[] args) {
+		short x = 145;
+		
+		int  y = x;
+		
+		float p = 45.5252f;
+		
+		double c = p;
+	}
+
+}

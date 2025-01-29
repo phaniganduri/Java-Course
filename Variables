@@ -1,0 +1,36 @@
+package com.instance;
+public class Employee {
+	//instance variables
+           int id;
+           String name;
+           double salary;
+           static String company;
+           public void details() {
+        	   System.out.println(id +" "+ name+" "+salary+" "+ company);
+           }
+}
+
+//Test.java
+package com.instance;
+public class Test {
+           public static void main(String[] args) {
+			Employee obj1 = new Employee();
+			Employee obj2 = new Employee();
+			
+			obj1.id = 101;
+			obj1.name = "Phani";
+			obj1.salary = 800000;
+			obj1.company = "Oracle";
+			
+			obj2.id = 102;
+			obj2.name = "Sai";
+			obj2.salary = 900000;
+			obj2.company = "Oracle";
+			
+			obj1.details();
+			obj2.details();
+			
+			
+		}
+}
+

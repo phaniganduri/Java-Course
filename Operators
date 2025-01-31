@@ -57,6 +57,68 @@ public class UnaryDecrement {
 
 }
 
+//Boolean Operator
+package com.relational;
+public class BooleanLogical {
+	public static void main(String[] args) {
+		int a = 10, b = 20, c = -15;
+		
+		boolean result = (a > b) && (b < c );
+		System.out.println(result);
+	    
+		result = (a > c) && (c > a);
+		System.out.println(result);
+		
+		result = (a < c) || (c < a);
+		System.out.println(result);
+		
+		result =  !(!(a > b) &&  !(b < c ));
+		System.out.println(result);
+		
+
+	}
+
+}
+
+
+//Bitwise Logical
+package com.relational;
+public class BitwiseLogical {
+	public static void main(String[] args) {
+		System.out.println(8 & 10);
+		System.out.println(8 | 10);
+		System.out.println(8 & 5);
+		System.out.println(7 ^ 6);
+		System.out.println(~1 );
+		
+		
+	}
+
+}
+
+
+// Ternary Operator
+
+package com.relational;
+import java.util.Scanner;
+public class TernaryOperator {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter age:");
+		int age = scanner.nextInt();
+		
+		 String result = age >= 18? "Eligible for vote" : "Not Eligible for vote";
+		System.out.println(result);
+		
+		
+		
+	}
+
+}
+
+
+
 
 
 

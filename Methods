@@ -1,0 +1,114 @@
+package com.arithmetic;
+import java.util.Scanner;
+public class Arithmetic {
+	int a,b,c;
+	Scanner scanner = new Scanner(System.in);
+	void add() {
+		System.out.println("Enter a :");
+		a=scanner.nextInt();
+		System.out.println("Enter b :");
+		b=scanner.nextInt();
+		c=a+b;
+		System.out.println("Addition is "+c);
+	}
+	int sub() {
+		System.out.println("Enter a :");
+		a=scanner.nextInt();
+		System.out.println("Enter b :");
+		b=scanner.nextInt();
+		c=a-b;
+		return c;
+		
+	}
+	void mul(int x, int y) {
+		a=x;
+		b=y;
+		c=a*b;
+		System.out.println("Multiplication is"+c);
+				
+	}
+	 int div(int x,int y) {
+		a=x;
+		b=y;
+		c=a/b;
+		return c;
+	}
+		
+
+}
+//Test class
+package com.arithmetic;
+
+public class ArithmeticText {
+
+	public static void main(String[] args) {
+		Arithmetic obj = new Arithmetic();
+		obj.add();
+		
+		int sub = obj.sub();
+		System.out.println("Subtraction is"+sub);
+		
+		obj.mul(10,20);
+		
+		int div = obj.div(15,3);
+		System.out.println("Division is" + div);
+		
+
+	}
+
+}
+
+//Call by value
+package callbyvalue;
+public class Sample {
+	void change(int x) {
+		x += 10;
+		System.out.println(x);
+		
+	}
+
+}
+
+//call by value test 
+package callbyvalue;
+public class CallByValueTest {
+	public static void main(String[] args) {
+		Sample sample = new Sample();
+		int a = 10;
+		sample.change(a);
+		System.out.println("After Calling Change a is "+a);
+	}
+
+}
+
+//call by reference
+package callbyreference;
+public class Sample {
+	int x;
+	void change(Sample obj) {
+		obj.x = obj.x+10;
+		System.out.println(obj.x);
+		
+	}
+
+}
+
+//call by reference
+package callbyreference;
+public class CallByReferenceTest {
+	public static void main(String[] args) {
+		Sample sample = new Sample();
+		
+		System.out.println(sample.x);
+		
+		sample.change(sample);
+		
+		System.out.println(sample.x);
+		
+		
+	}
+
+}
+
+
+

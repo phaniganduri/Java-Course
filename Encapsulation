@@ -1,0 +1,59 @@
+package com.encap;
+public class Employee {
+	private int id;
+	private String name;
+	private double salary;
+	
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		if(id < 0) {
+			System.out.println("Wrong Input");
+			return;
+		}
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		if(salary < 0) {
+			System.out.println("Salary Shulod not be negative");
+			return;
+		}
+		this.salary = salary;
+	}
+
+	public void details() {
+		System.out.println(id + " "+name+" "+salary);
+	}
+}
+
+//test class
+package com.encap;
+public class Test {
+	public static void main(String[] args) {
+		Employee employee = new Employee();
+		employee.setId(101);
+		employee.setName("Phani");
+		employee.setId(101);
+		employee.setSalary(50000);
+		employee.details();
+
+	}
+
+}
+
+

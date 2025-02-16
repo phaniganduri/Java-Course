@@ -1,0 +1,303 @@
+//StringExample1
+package com.str;
+public class StringExample1 {
+	public static void main(String[] args) {
+		String name1 = "Phani";
+		String name2 = "Sai";
+		 String fullname =  name1.concat(name2);
+		System.out.println(name1);
+		System.out.println(name2);
+		System.out.println(fullname);
+
+	}
+
+}
+
+//StringExample2
+package com.str;
+public class StringExample2 {
+	public static void main(String[] args) {
+		String name1 = "Phani";  //String literal
+		String name2 = "Phani";  //String literal
+		String name3 = new String("Money"); //String Object
+		String name4 = new String("Money"); //String Object
+		System.out.println(name1.equals(name2)); 
+		System.out.println(name1 == name2);
+		System.out.println(name3.equals(name4));
+		System.out.println(name3 == name4);
+		
+	}
+
+}
+
+//StringExample3
+package com.str;
+public class StringExample3 {
+	public static void main(String[] args) {
+		String name = "Java Programming";
+		int length = name.length();
+		System.out.println(length);		
+		String uname = name.toUpperCase();
+		System.out.println(name);
+		
+		String lname=uname.toLowerCase();
+	    System.out.println(lname);
+
+	}
+
+}
+//StringExample4
+package com.str;
+public class StringExample4 {
+	public static void main(String[] args) {
+		 String name= "Phani Ganduri";
+		 String substr1 = name.substring(5);
+		 System.out.println(substr1);
+		 String substr2 = name.substring(6, 10);
+		 System.out.println(substr2);
+	}
+
+}
+
+//StringExample5
+package com.str;
+public class StringExample5 {
+	public static void main(String[] args) {
+		String subject = "Java Programming Web Prigrammming";
+	    int index = subject.indexOf("Web"); 
+	    System.out.println(index); //sub string from main string
+		
+	    index = subject.indexOf("Programming");
+	    System.out.println(index);
+
+	}
+
+}
+//StringExample6
+package com.str;
+public class StringExample6 {
+	public static void main(String[] args) {
+		
+		String email1 = "phaniganduri@gmail.com";
+		String email2 = "PHANIGANDURI@gmail.com";
+		System.out.println(email1.equals(email2));
+		System.out.println(email1.equalsIgnoreCase(email2));	
+	}
+
+}
+
+//StringExample7
+package com.str;
+public class StringExample7 {
+	public static void main(String[] args) {
+		String name1 = "Anand";
+		String name2 = "ANAND";
+		String name3 = "Anand";
+		System.out.println(name1.compareTo(name2));
+		System.out.println(name1.compareToIgnoreCase(name2));
+		System.out.println(name1.compareTo(name3));
+
+	}
+
+}
+
+//SttrngExample8
+package com.str;
+public class StringExample8 {
+	public static void main(String[] args) {
+		String name ="James Gosling";
+		 System.out.println(name.contains("mes"));
+		 System.out.println(name.contains("Go"));
+		 System.out.println(name.contains("gosling"));
+	}
+
+}
+
+//StringExample9
+package com.str;
+public class StringExample9 {
+	public static void main(String[] args) {
+		String name ="Sachin Tendulkar";
+		System.out.println(name.charAt(0));
+		
+		System.out.println(name.charAt(9));
+		String email = "  phanigandur95@gmail.com   ";
+		System.out.println(email.length());
+		String trimemail = email.trim();
+		
+		System.out.println(trimemail.length());
+	}
+
+}
+
+//StringExample10
+package com.str;
+public class StringExample10 {
+	public static void main(String[] args) {
+		String name="Java Prohram";
+		String repstring= name.replace('h', 'g');
+		System.out.println(repstring);
+		String subject="Web Programming";
+		String repsubject= subject.replace("Programming", "Services");
+	    System.out.println(repsubject);	
+	}
+}
+
+
+//StringBufferExample1
+package com.str;
+public class StringBufferExample {
+	public static void main(String[] args) {
+		StringBuffer subject = new StringBuffer("Web");
+	    subject.append(" Programming");
+	    System.out.println(subject);
+	    
+	    StringBuffer name = new StringBuffer("P0ha0ni");
+	    System.out.println("subject");
+	    
+	    name.deleteCharAt(1);
+	    System.out.println(name);
+		name.deleteCharAt(3);
+		System.out.println(name);
+	}
+}
+
+//StringBufferExample2
+package com.str;
+public class StringBufferExample2 {
+	public static void main(String[] args) {
+		StringBuffer name = new StringBuffer("Phani");
+		name.reverse();
+		System.out.println(name);
+		
+		StringBuffer subject = new StringBuffer("Web Programming");
+		subject.replace(4, 15, "Services");
+		System.out.println(subject);
+	}
+
+}
+
+//StringBufferExample3
+package com.str;
+public class StringBufferExample3 {
+	public static void main(String[] args) {
+		
+		StringBuffer name = new StringBuffer("Phani Ganduri");
+		name.delete(6, 13);
+		System.out.println(name);
+		
+	}
+
+}
+
+//Pangram String
+package com.str;
+public class PangramString {
+	public static boolean isPangram(String input) {
+		input = input.toLowerCase();
+		boolean arr[] = new boolean[26];
+		boolean isPangram = true;
+		for(int i = 0; i< input.length(); i++) {
+			char ch = input.charAt(i);
+			if(ch >='a' && ch<='z') {
+				int index = ch - 'a';
+				arr[index] = true;
+			}
+		}
+		for(boolean x : arr) {
+			if(x==false) {
+				isPangram = false;
+				break;
+			}
+		}
+		return isPangram;
+	}
+	public static void main(String[] args) {
+		System.out.println("quick brown fox jumps over the lazy dog");
+		System.out.println("Pack my box with five dozen liquor jugs");
+		System.out.println("How vexingly quick daft zebras jump");
+	}
+
+}
+
+//Anagram String
+package com.str;
+import java.util.Arrays; 
+public class AnagramExample {
+	public static boolean isAnagram(String input1, String input2) {
+		input1 = input1.toLowerCase();
+		input2 = input2.toLowerCase();
+		char arr1[] = input1.toCharArray();
+		char arr2[] = input2.toCharArray();
+		Arrays.sort(arr1);
+		Arrays.sort(arr2);
+		return Arrays.equals(arr1, arr2);
+	}
+
+	public static void main(String[] args) {
+		System.out.println(isAnagram("HEART", "EARTH")); // true
+		System.out.println(isAnagram("CCAT", "CAAT"));   // false
+		System.out.println(isAnagram("LISTEN", "SILENT")); // true
+	}
+}
+//CombinationOfCharactersOfTwoStrings
+package com.str;
+import java.util.Scanner;
+public class CombinationOfCharactersOfTwoStrings {
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("Enter a First String:");
+		String s1 = scanner.next();
+		System.out.println("Enter a Second String:");
+		String s2 = scanner.next();
+		
+		int maxlength=s1.length() > s2.length() ? s1.length():s2.length();
+		
+		StringBuffer combinedString  = new StringBuffer();
+		
+		for (int i = 0; i <maxlength; i++) {
+			if(i < s1.length()) {
+				combinedString.append(s1.charAt(i));
+			}
+		 	if(i < s2.length()) {
+		 		combinedString.append(s2.charAt(i));
+		 	}
+		}
+		System.out.println(combinedString);
+
+	}
+
+}
+
+
+//CountVowelsConsonants
+package com.str;
+public class CountVowelsConsonants {
+    public static void printCount(String input) {
+        input = input.toLowerCase();
+        int vCount = 0;
+        int cCount = 0;
+        char arr[] = input.toCharArray();
+        
+        for (char ch : arr) {
+            if (ch >= 'a' && ch <= 'z') {
+                if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+                    vCount++;
+                } else {
+                    cCount++;
+                }
+            }
+        }
+        System.out.println("Vowels: " + vCount);
+        System.out.println("Consonants: " + cCount);
+    }
+
+    public static void main(String[] args) {
+        printCount("Phani Sai");
+    }
+}
+
+
+
+

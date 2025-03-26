@@ -1,0 +1,140 @@
+package com.map;
+import java.util.LinkedHashMap;
+import java.util.Map;
+public class Class {
+	public static void main(String[] args) {
+		LinkedHashMap<String, Integer> scores = new LinkedHashMap<String, Integer>();
+		scores.put("Sachin", scores.getOrDefault("Sachin", 0)+35);
+		scores.put("Sehwag", scores.getOrDefault("Sehwag", 0)+79);
+		scores.put("Ganguly",scores.getOrDefault("Ganguly", 0)+ 63);
+		scores.put("Dhoni",  scores.getOrDefault("Dhoni", 0)+64);
+		scores.put("Sachin", scores.getOrDefault("Sachin", 0)+ 85);
+		scores.put("Sehwag", scores.getOrDefault("Sehwag", 0)+49);
+		
+		for(Map.Entry<String, Integer> entry: scores.entrySet()) {
+			System.out.println(entry.getKey() + ":"+ entry.getValue());
+		}
+	}
+}
+
+package com.map;
+import java.util.LinkedHashMap;
+public class CricketScore {
+	public static void main(String[] args) {
+		String[] batsmen = {"Gill","HitMan","Chiku","Shreyas","Axar","KL Rahul","Kung Fu Pandya","Jaddu","Shami","Varun","Kuldeep"};
+		LinkedHashMap<String,Integer> scores = new LinkedHashMap<String, Integer>();
+		scores.put("Gill", 24);
+		scores.put("HitMan", 76);
+		scores.put("Chiku", 1);
+		scores.put("Shreyas", 48);
+		scores.put("Axar", 29);
+		scores.put("KL Rahul", 34);
+		scores.put("Kung Fu Pandya", 28);
+		scores.put("Jaddu", 9);
+		for(String player : batsmen) {
+			System.out.println(player+":"+scores.getOrDefault(player,0));	
+		}	
+	}
+}
+
+package com.map;
+import java.util.HashMap;
+import java.util.Map;
+public class HashMapExample {
+
+	public static void main(String[] args) {
+		HashMap<String, String> map = new HashMap<String , String>();
+		map.put("ID222","Phani");
+		map.put("ID111","Sai");
+		map.put("ID444","Cbn");
+		map.put("ID555","Puri");
+		map.put("ID666","Thaman");
+		map.put("ID333","Dsp");
+		map.put(null,"Phani");
+		map.put("ID111","Mani");
+		System.out.println(map);
+		System.out.println(map.get("ID444"));
+		System.out.println(map.containsKey("ID123"));
+		System.out.println(map.containsValue("ManMohan"));
+		System.out.println(map.keySet());
+		System.out.println(map.values());
+		System.out.println(map.size());
+		
+		for(Map.Entry<String, String> entry :map.entrySet() ) {
+			System.out.println(entry.getKey() + " "+entry.getValue());
+		}
+	}
+
+}
+
+package com.map;
+import java.util.LinkedHashMap;
+import java.util.Map;
+public class LinkedHashMapExample {
+
+	public static void main(String[] args) {
+		LinkedHashMap<String, String> map = new LinkedHashMap<String , String>();
+		map.put("ID555","Phani");
+		map.put("ID222","Sai");
+		map.put("ID111","Cbn");
+		map.put("ID333","Puri");
+		map.put("I666","Thaman");
+		map.put("ID444","Dsp");
+//		map.put(null,"Phani")
+		System.out.println(map.get("ID444"));
+		System.out.println(map.containsKey("ID123"));
+		System.out.println(map.containsValue("ManMohan"));
+		System.out.println(map.keySet());
+		System.out.println(map.values());
+		System.out.println(map.size());
+		
+		for(Map.Entry<String, String> entry :map.entrySet() ) {
+			System.out.println(entry.getKey() + " "+entry.getValue());
+		}
+	}
+
+}
+
+package com.map;
+import java.util.Map;
+import java.util.TreeMap;
+public class TreeMapExample {
+
+	public static void main(String[] args) {
+		TreeMap<String, String> map = new TreeMap<String , String>();
+		map.put("ID222","Sai");
+		map.put("ID111","Phani");
+		map.put("ID333","Cbn");
+		map.put("ID444","Puri");
+		map.put("ID555","Thaman");
+		map.put("ID666","Dsp");
+//		map.put(null,"Phani");
+		map.put("ID111","Mani");
+		System.out.println(map);
+		map.put("ID222","Phani");
+		map.put("ID111","Sai");
+		map.put("ID444","Cbn");
+		map.put("ID555","Puri");
+		map.put("ID666","Thaman");
+		map.put("ID333","Dsp");
+//		map.put(null,"Phani");
+		map.put("ID111","Mani");
+		System.out.println(map);
+		System.out.println(map.get("ID444"));
+		System.out.println(map.containsKey("ID123"));
+		System.out.println(map.containsValue("ManMohan"));
+		System.out.println(map.keySet());
+		System.out.println(map.values());
+		System.out.println(map.size());
+		
+		for(Map.Entry<String, String> entry :map.entrySet() ) {
+			System.out.println(entry.getKey() + " "+entry.getValue());
+		}
+		
+	}
+
+}
+
+
+
+

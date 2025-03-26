@@ -1,0 +1,15 @@
+package com.wrapper;
+
+public class AutoUnBoxing {
+
+	public static void main(String[] args) {
+		
+		Integer xobj = 10;
+		int x = xobj;   //internally int x = (int)xobj;
+		
+		Double dobj = new Double(45.62);
+		double d = (double)dobj;   //internally double d = (double)dobj;
+		
+	}
+
+}

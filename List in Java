@@ -1,0 +1,163 @@
+package com.list;
+import java.util.ArrayList;
+import java.util.Iterator;
+public class IteratorExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        list1.add(75);
+        list1.add(43);
+        list1.add(88);
+        list1.add(102);
+        list1.add(7);
+        list1.add(5);
+        Iterator<Integer> it1 = list1.iterator();        
+        while (it1.hasNext()) {
+            System.out.print(it1.next() + " "); 
+        }
+        System.out.println(); 
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+        list2.addAll(list1);
+        Iterator<Integer> it2 = list2.iterator();        
+        while (it2.hasNext()) {
+            System.out.print(it2.next() + " ");
+        }
+        System.out.println(); // Line break after second loop
+    }
+}
+
+package com.list;
+import java.util.LinkedList;
+public class LinkedLIstExample {
+	public static void main(String[] args) {
+		LinkedList<String> list = new LinkedList<String>();
+		list.add("Phani");  //0
+		list.add("Dell");   //1
+		list.add("Mac");    //2 
+		list.add("Lenovo"); //3
+		list.add("Acer");   //4
+		list.add("Dell");   //5
+		list.add("Sai");    //6
+		list.add("Modi");   //7
+		list.add("Robo");   //8
+		System.out.println(list);
+		System.out.println(list.get(4));  
+	  System.out.println(list.indexOf("Sai"));    
+	  System.out.println(list.indexOf("Dell"));
+	  System.out.println(list.lastIndexOf("Dell"));  
+	     list.add(8, "Ravi"); 
+	     System.out.println(list);
+	     list.set(4, "Ram");      
+	     System.out.println(list);
+	     System.out.println(list.size());
+	     list.remove(3);
+	     System.out.println(list);
+	     list.remove("Robo");
+	     System.out.println(list);
+	     System.out.println(list.contains("Phani"));
+	     System.out.println(list.isEmpty());
+	     System.out.println(list.subList(2, 6));
+	}
+}
+
+package com.list;
+import java.util.ArrayList;
+public class ListExample {
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        list1.add(75);
+        list1.add(43);
+        list1.add(88);
+        list1.add(102);
+        list1.add(7);
+        list1.add(5);   
+        for(Integer x : list1) {
+        	System.out.println(x + "  " );
+        }
+        System.out.println();
+        ArrayList<Integer> list2 = new ArrayList<Integer>();
+        list2.addAll(list2);
+        
+        for(Integer x : list2) {
+        	System.out.println(x + "  " );
+        }
+        System.out.println();
+	}
+}
+
+package com.list;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Iterator;
+import java.util.Set;
+public class SortingExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> list1 = new ArrayList<Integer>();
+        list1.add(75);
+        list1.add(43);
+        list1.add(88);
+        list1.add(102);
+        list1.add(7);
+        list1.add(5);
+        Collections.sort(list1);
+        
+        Iterator<Integer> it1 = list1.iterator();        
+        while (it1.hasNext()) {
+            System.out.print(it1.next()+" "); 
+        }
+        System.out.println(); 
+    }
+}
+
+package com.list;
+import java.util.Vector;
+public class VectorListExample {
+    public static void main(String[] args) {
+        
+        Vector<String> list = new Vector<String>();
+        list.add("Phani");  //0
+        list.add("Dell");   //1
+        list.add("Mac");    //2 
+        list.add("Lenovo"); //3
+        list.add("Acer");   //4
+        list.add("Dell");   //5
+        list.add("Sai");    //6
+        list.add("Modi");   //7
+        list.add("Robo");   //8
+        System.out.println(list);
+        
+        System.out.println(list.get(4));
+        
+        System.out.println(list.indexOf("Sai"));
+        
+        System.out.println(list.indexOf("Dell"));
+        
+        System.out.println(list.lastIndexOf("Dell"));
+        
+        list.add(8, "Ravi"); 
+        System.out.println(list);
+        
+        list.set(4, "Ram");      
+        System.out.println(list);
+        
+        System.out.println(list.size());
+        
+        list.remove(3);
+        System.out.println(list);
+        
+        list.remove("Robo");
+        System.out.println(list);
+        
+        System.out.println(list.contains("Phani"));
+        
+        System.out.println(list.isEmpty());
+        
+        System.out.println(list.subList(2, 6));
+    }
+}
+
+
+
+
+
+

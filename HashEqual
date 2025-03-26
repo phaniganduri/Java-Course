@@ -1,0 +1,79 @@
+package com.hashequal;
+public class Employee implements Comparable<Employee> {
+    private String id;
+    private int age;
+    private String dept;
+    private double salary;
+
+    @Override
+    public int compareTo(Employee o) {
+        return this.id.compareTo(o.id);
+    }
+
+    public Employee(String id, int age, String dept, double salary) {
+        super();
+        this.id = id;
+        this.age = age;
+        this.dept = dept;
+        this.salary = salary;
+    }
+
+    public String toString() {
+        return id + " " + age + " " + dept + " " + salary;
+    }
+@Override
+    public boolean equals(Object o) {
+        if (o == null) {
+            return false;
+        } else if (this == o) {
+            return true;
+        } else if (this.getClass() != o.getClass()) {
+            return false;
+        } else {
+            Employee obj = (Employee) o;
+            return this.id.equals(obj.id) && this.age == obj.age && this.dept.equals(obj.dept) && this.salary == obj.salary;
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        int hashcode = 13;
+        hashcode = hashcode * 17 + id.hashCode();
+        hashcode = hashcode * 17 + age;
+        hashcode = hashcode * 17 + dept.hashCode();
+        hashcode = hashcode * 17 + (int)(salary);
+        return hashcode;
+    }
+}
+
+package com.hashequal;
+import java.util.HashSet;
+public class HashEqualExample {
+    public static void main(String[] args) {  // Fixed main method signature
+        HashSet<Employee> set = new HashSet<Employee>();
+
+        Employee e1 = new Employee("ID111", 24, "HR", 75000.00);
+        Employee e2 = new Employee("ID111", 24, "HR", 75000.00);
+        Employee e3 = new Employee("ID222", 44, "Sales", 55000.00);
+        Employee e4 = new Employee("ID222", 44, "Sales", 55000.00);
+
+        set.add(e1);
+        set.add(e2);
+        set.add(e3);
+        set.add(e4);
+
+        System.out.println(e1.equals(e2));
+        System.out.println(e1.hashCode());
+        System.out.println(e2.hashCode());
+        System.out.println(e3.equals(e4));  // true
+
+        set.add(new Employee("ID111", 24, "HR", 75000.00));
+        set.add(new Employee("ID111", 24, "HR", 75000.00));  // Duplicate, should be removed
+        set.add(new Employee("ID222", 44, "Sales", 55000.00));
+        set.add(new Employee("ID222", 44, "Sales", 55000.00));  // Duplicate, should be removed
+
+        for (Employee obj : set) {
+            System.out.println(obj);
+        }
+    }
+}

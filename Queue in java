@@ -1,0 +1,56 @@
+package com.queue;
+import java.util.Comparator;
+import java.util.PriorityQueue;
+public class PriorityQueueExample {
+
+	public static void main(String[] args) {
+		PriorityQueue<Integer> queue = new PriorityQueue<Integer>(Comparator.reverseOrder());
+		queue.add(77);
+		queue.add(44);
+		queue.add(88);
+		queue.add(33);
+		queue.add(99);
+		queue.add(7);
+		queue.add(11);
+		queue.add(27);
+		
+		System.out.println(queue.peek());
+		
+		System.out.println(queue.contains(99));
+		while(queue.size() > 0) {
+		System.out.println(queue.remove());
+		}
+		System.out.println(queue.poll()); //null
+		System.out.println(queue.remove()); //exception
+	
+	}
+
+}
+
+package com.queue;
+import java.util.ArrayDeque;
+public class ArrayDequeExample {
+
+	public static void main(String[] args) {
+		ArrayDeque<Integer> deque = new ArrayDeque<Integer>();
+		deque.addFirst(70);
+		deque.addFirst(43);
+		deque.addFirst(88);
+		deque.addFirst(47);
+		deque.remove();
+		deque.removeLast();
+		deque.addFirst(66);
+		deque.add(96);
+		deque.add(85);
+		deque.addFirst(36);
+		deque.remove();
+		deque.removeLast();
+		
+		System.out.println(deque);
+		
+	}
+
+}
+
+
+

@@ -1,0 +1,166 @@
+package com.set;
+public class Employee implements Comparable<Employee>   {
+	private String id;
+	private int age;
+	private String dept;
+	private double salary;
+	public Employee(String id, int age, String dept, double salary) {
+		super();
+		this.id = id;
+		this.age = age;
+		this.dept = dept;
+		this.salary = salary;
+	}
+	public String toString() {
+		return id+" "+age+" "+dept+" "+salary;	
+	}
+//	@Override
+//	public int compareTo(Employee o) {
+//		if(this.salary > o.salary) {
+//			return 1;
+//		}
+//		else if(this.salary < o.salary) {
+//			return -1;
+//		}
+//		else {
+//			return 0;
+//		}
+	@Override
+	public int compareTo(Employee o) {
+		if(this.salary > o.salary) {
+			return -1;
+		}
+		else if(this.salary < o.salary) {
+			return 1;
+		}
+		else {
+			return 0;
+		}
+	}
+
+}
+
+
+package com.set;
+import java.util.HashSet;
+import java.util.Iterator;
+public class HashSetExample {
+	public static void main(String[] args) {
+		HashSet<String> set = new HashSet<String> ();
+//		set.add(null);
+		set.add("Phani");
+		set.add("Gopal");
+		set.add("Dhanvi");
+		set.add("Bhargav");
+		set.add("Phani");
+		set.add("Raj");
+		set.add("Java");
+//		set.add(null);
+		 System.out.println(set);
+		 System.out.println(set);
+	     System.out.println(set.contains("Phani"));
+	     System.out.println(set.size());
+	     System.out.println(set.isEmpty());
+	     System.out.println(set.remove("Gopal"));
+	        
+		for(String str: set) {
+			System.out.println(str+" ");
+		}
+		System.out.println();
+		Iterator<String> it = set.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next()+" ");
+		}
+
+	}
+
+}
+
+
+package com.set;
+import java.util.Iterator;
+import java.util.LinkedHashSet;  // Importing Java's LinkedHashSet
+public class LinkedHashSetExample {  // Renamed the class to avoid conflict
+    public static void main(String[] args) {
+        LinkedHashSet<String> set = new LinkedHashSet<>(); // Now it correctly refers to Java's LinkedHashSet
+        set.add("Phani");
+        set.add("Gopal");
+        set.add("Dhanvi");
+        set.add(null);
+        set.add("Bhargav");
+        set.add("Phani"); // Duplicate, will not be added
+        set.add("Raj");
+        set.add("Java");
+        set.add(null);
+        System.out.println(set);
+        System.out.println(set);
+		 System.out.println(set);
+	     System.out.println(set.contains("Phani"));
+	     System.out.println(set.size());
+	     System.out.println(set.isEmpty());
+	     System.out.println(set.remove("Gopal"));
+	        
+		for(String str: set) {
+			System.out.println(str+" ");
+		}
+		System.out.println();
+		Iterator<String> it = set.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next()+" ");
+		}
+    }
+}
+
+package com.set;
+import java.util.TreeSet;
+public class TreeSetCustomObjects {
+	public static void main(String[] args) {
+		TreeSet<Employee> employees = new TreeSet<Employee>();
+		employees.add(new Employee("ID123", 45, "HR", 75000.00));
+		employees.add(new Employee("ID456", 25, "Marketing", 65000.00));
+		employees.add(new Employee("ID789", 35, "IT", 85000.00));
+		employees.add(new Employee("ID546", 55, "Sales", 55000.00));
+		
+		for(Employee obj : employees) {
+			System.out.println(obj);
+		}
+
+	}
+
+}
+
+
+package com.set;
+import java.util.Iterator;
+import java.util.TreeSet;  
+public class TreeSetExample {  
+    public static void main(String[] args) {
+        TreeSet<String> set = new TreeSet<>(); 
+//        set.add(null);
+        set.add("Phani");
+        set.add("Gopal");
+        set.add("Dhanvi");
+        set.add("Bhargav");
+        set.add("Phani"); 
+        set.add("Raj");
+        set.add("Java");
+//        set.add(null);
+        System.out.println(set);
+		 System.out.println(set);
+	     System.out.println(set.contains("Phani"));
+	     System.out.println(set.size());
+	     System.out.println(set.isEmpty());
+	     System.out.println(set.remove("Gopal"));
+	        
+		for(String str: set) {
+			System.out.println(str+" ");
+		}
+		System.out.println();
+		Iterator<String> it = set.iterator();
+		while(it.hasNext()) {
+			System.out.println(it.next()+" ");
+		}
+    }
+}
+
+

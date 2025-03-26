@@ -1,0 +1,47 @@
+// Factorial Program in java
+package com.recursion;
+public class Factorial {
+	public int factorial(int number) {
+		if(number == 0 || number == 1) {
+			return 1;
+		}
+		return number * factorial(number -1 );
+		
+	}
+
+}
+
+package com.recursion;
+public class RecursionTest {
+	public static void main(String[] args) {
+		Factorial factorial = new Factorial();
+	    int fact = factorial.factorial(5);
+		System.out.println(fact);
+	}
+
+}
+
+//Fibonacci in Java
+
+package com.recursion;
+public class Fibonacci {
+	public int fibonacci(int number) {
+		if(number <= 1) {
+			return number;
+		}
+		return fibonacci(number-2) + fibonacci(number-1);
+	}
+}
+
+package com.recursion;
+public class FibonacciTest {
+	public static void main(String[] args) {
+		Fibonacci fibonacci = new Fibonacci();
+		for(int i = 0; i < 10; i++) {
+			System.out.println(fibonacci.fibonacci(i));
+		}
+	}
+}
+
+
+

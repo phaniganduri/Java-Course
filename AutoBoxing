@@ -1,0 +1,10 @@
+package com.wrapper;
+public class AutoBoxing {
+	public static void main(String[] args) {
+		
+		int a = 10;
+		Integer obj  = a;   // internally Integer obj  = (Integer)a;
+		boolean x  = true;
+		Boolean xobj = x;    //internally Boolean xobj = (Boolean)x; 
+	}
+}
